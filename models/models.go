@@ -2,7 +2,7 @@ package models
 
 
 type PageData struct {
-	Page 	strings
+	Page 	string
 	Title	string
 	Message string
 }
