@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "qblog"
+version = "0.1.0"
+description = ""
+authors = ["SmokierLemur51 <ldl6147@gmail.com>"]
+readme = "README.md"
+packages = [{include = "qblog", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+quart = "^0.19.3"
+
+[tool.poetry.scripts]
+init_db = "qblog:init_db"
+start = "qblog:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

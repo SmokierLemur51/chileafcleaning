@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="container-md">
+		<form method="POST" action="{{ url_for('public.create') }}" style="display: flex; flex-direction: column; gap: 8px;
+		max-width: 400px;">
+			<label>Title: <input type="text" size="30" name="title"/></label>
+			<label>Text: <textarea name="text" rows="5" cols="40"></textarea></label>
+			<button type="submit">Create</button>
+		</form>
+		<br><br>
+		<main>
+			{% for post in posts %}
+				<article>
+					<h2>{{ post.title }}</h2>
+					<p>{{ post.text|safe }}</p>	
+				</article>
+			{% else %}
+				<p>No posts available</p>
+			{% endfor %}
+		</main>
+	</div>
+
+{% endblock content %}
