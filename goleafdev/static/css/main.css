@@ -1,0 +1,29 @@
+.no-pad {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+/*
+	body color options
+	- a9aba7
+	- b8bab6
+	- c1c2c0
+	- eaf5df
+*/
+.backdrop {
+	background-color: #f5fced;
+}
+
+
+/*
+	nav color options
+	- 739c76
+	- 3f7543
+	- 9db388
+	- 
+*/
+
+.greenleaf-color {
+	background-color: #acdb7f;
+	padding: 10pt;
+}
+
