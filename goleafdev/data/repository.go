@@ -30,6 +30,7 @@ type PublicEndPoints struct {
 // client portal
 type ClientPageData struct {}
 
+
 // admin pages
 type DirectorPageData struct {}
 
@@ -92,9 +93,9 @@ type Project struct {
 	Tickets  			[]Ticket
 	Notes				[]Note
 	CreatedAt			time.Time
-	CompletedAt  		time.Time
-	SellingPrice		float32
-	HourlyRate			float32
+	CompletedAt  	    time.Time
+	SellingPrice	    float32
+	HourlyRate	    float32
 	TotalHoursWorked    float32
 
 }
@@ -105,9 +106,27 @@ type Project struct {
 type Ticket struct {
 	ID   	int
 	ProjectID int
+	CreatedAt time.Time
+	CompleteAt time.time
+	Status	Status
+	HourlyRate float32
+	TotalHours float32
+	Title string
+	Content string
+	Tasks []Task
+	Notes []Note
+}
 
+type Task struct {
+	ID int
+	TaskId int
+	Complete bool
+	Message string
 }
 
 type Note struct {
 	ID int
+	TaskId int
+	Title string
+	Content string
 }
